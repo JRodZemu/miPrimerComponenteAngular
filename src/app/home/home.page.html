@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <app-cabecera></app-cabecera>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <app-saluda *ngFor="let usuario of usuarios" nombre="{{usuario.nombre}}" (propagar)="procesaPropagar($event)"></app-saluda>
+    <app-saluda [nombre] ="nombre"></app-saluda>
+   </div>
+</ion-content>
